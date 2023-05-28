@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class dortvebesinkuvvetleri {
+    public static void main(String[] args) {
+        Scanner girdi = new Scanner(System.in);
+        int sayi;
+        System.out.print("Bir sayı giriniz :");
+        sayi = girdi.nextInt();
+
+
+            System.out.println("Girilen sayıya kadar olan 4'ün katları:");
+        for (int i = 1; i <= sayi; i *= 4) {
+            System.out.print(i+"  ");
+        }
+        System.out.println("");
+            System.out.println("Girilen sayıya kadar olan 5'in katları:");
+        for (int k = 1; k <= sayi; k *= 5) {
+            System.out.print(k+"  ");
+        }
+
+
+    }
+}
