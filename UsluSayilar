@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class uslusayi {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int k, n;
+        int toplam = 1;
+
+        System.out.print("Üssü alınacak sayıyı giriniz :");
+        k = input.nextInt();
+        System.out.print("Üssün değerini giriniz :");
+        n = input.nextInt();
+
+        for (int i = 1; i <= n; i++) {
+            toplam = toplam * k;
+        }
+        System.out.printf("Sonuç :" + toplam);
+
+    }
+}
