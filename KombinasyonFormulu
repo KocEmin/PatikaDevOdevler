@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Kombinasyon {
+    public static void main(String[] args) {
+        Scanner girdi = new Scanner(System.in);
+
+        System.out.print("Kombinasyonun ilk değerini giriniz :");
+        int ilkdeger = girdi.nextInt();
+        System.out.print("Kombinasyonun ikinci değerini giriniz :");
+        int ikincideger = girdi.nextInt();
+        int toplam1 = 1;
+        int toplam2 = 1;
+        int fark = ilkdeger - ikincideger;
+        int toplam3 = 1;
+
+        for (int i = 1; i <= ilkdeger; i++) {
+            toplam1 = toplam1 * i;
+
+        }
+        for (int i = 1; i <= ikincideger; i++) {
+            toplam2 = toplam2 * i;
+
+        }
+        for (int i = 1; i <= fark; i++) {
+            toplam3 = toplam3 * i;
+
+        }
+        System.out.print("C(" + ilkdeger + "," + ikincideger + ") :" + toplam1 / (toplam2 * toplam3));
+
+    }
+}
