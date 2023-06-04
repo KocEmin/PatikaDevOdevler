@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class yildizileElmasYapma{
+    public static void main(String[] args) {
+        Scanner girdi = new Scanner(System.in);
+        System.out.print("Elmas deseni için sayı girin : ");
+        int satirSayisi = girdi.nextInt();
+
+        int boslukSayisi = satirSayisi - 1;
+        int yildizSayisi = 1;
+
+        for (int i = 1; i <= satirSayisi; i++) {
+            for (int j = 1; j <= boslukSayisi; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= yildizSayisi; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+
+            boslukSayisi--;
+            yildizSayisi += 2;
+        }
+
+        boslukSayisi = 1;
+        yildizSayisi = 2 * (satirSayisi - 1) - 1;
+
+
+        for (int i = 1; i <= satirSayisi - 1; i++) {
+            for (int j = 1; j <= boslukSayisi; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= yildizSayisi; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+
+            boslukSayisi++;
+            yildizSayisi -= 2;
+        }
+    }
+}
