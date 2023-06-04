@@ -1,0 +1,34 @@
+public class armstrongSayi {
+    public static void main(String[] args) {
+        int basamakSayisi;
+        int basamakDegeri;
+        int sonuc;
+        int usdegeri;
+
+        for (int sayi = 100; sayi <= 9999; sayi++) {
+            basamakSayisi = 0;
+            sonuc = 0;
+
+            int tempNumber = sayi;
+
+            while (tempNumber != 0) {
+                tempNumber = tempNumber / 10;
+                basamakSayisi++;
+            }
+
+            tempNumber = sayi;
+            while (tempNumber != 0) {
+                basamakDegeri = tempNumber % 10;
+                usdegeri = 1;
+                for (int i = 1; i <= basamakSayisi; i++) {
+                    usdegeri *= basamakDegeri;
+                }
+                sonuc += usdegeri;
+                tempNumber /= 10;
+            }
+            if (sonuc == sayi) {
+                System.out.println(sayi + " sayısı armstrong sayıdır.");
+            }
+        }
+    }
+}
