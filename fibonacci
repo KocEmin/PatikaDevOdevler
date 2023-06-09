@@ -1,0 +1,14 @@
+public class fibonacci {
+    public static void main(String[] args) {
+        int x = 0;
+        int k = 1;
+        int sonuc;
+
+        for (int i = 1; i <= 9; i++) {
+            sonuc=x+k;
+            System.out.println(x+ " + "+k + "=" +sonuc);
+            x=k;
+            k=sonuc;
+        }
+    }
+}
