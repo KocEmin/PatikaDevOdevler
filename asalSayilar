@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class AsalSayi {
+    public static void main(String[] args) {
+        int i, k;
+        boolean asalsayi;
+
+        System.out.println("100' kadar olan asal sayılar");
+        for (i = 2; i <= 100; i++) {
+            asalsayi = true;
+            
+            for (k = 2; k <= i / 2; k++) {
+                if (i % k == 0) {
+                    asalsayi = false;
+                    break;
+                }
+            }
+            if (asalsayi) {
+                System.out.print(i + "-");
+            }
+        }
+    }
+}
