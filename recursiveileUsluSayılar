@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class usHesaplama {
+    static int power(int a, int b) {
+        int result = 1;
+        for (int i = 1; i <= b; i++) {
+            result = result * a;
+
+        }
+        return result;
+
+    }
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        while (true) {
+            System.out.println("Üs Hesaplama Programına Hoş Geldiniz");
+            System.out.print("Taban Değerini Giriniz :");
+            int a = input.nextInt();
+            System.out.print("Üs Değerini Giriniz :");
+            int b = input.nextInt();
+            System.out.println("Sonuç =" + power(a, b));
+        }
+    }
+}
